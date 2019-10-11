@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+  <h2>새로운 영화를 등록해주세요</h2>
+  <form action="/movies/{{movie.id}}/update/">
+    <div>title : <input type="text" class="form-control", name="title" value="{{movie.title}}"></div>
+    <div>title_en : <input type="text" class="form-control", name="title_en" value="{{movie.title_en}}"></div>
+    <div>audience : <input type="integer" class="form-control", name="audience" value="{{movie.audience}}"></div>
+    <div>open_data : <input type="date" class="form-control", name="open_data" value="{{movie.open_data|date:'Y-m-d'}}"></div>
+    <div>genre : <input type="text" class="form-control", name="genre" value="{{movie.genre}}"></div>
+    <div>watch_grade : <input type="text" class="form-control", name="watch_grade" value="{{movie.watch_grade}}"></div>
+    <div>score : <input type="float" class="form-control", name="score" value="{{movie.score}}"></div>
+    <div>poster_url : <input type="text" class="form-control", name="poster_url" value="{{movie.poster_url}}"></div>
+    <div>description : <input type="text" class="form-control", name="description" value="{{movie.description}}"></div>
+    <input type="submit" class="btn btn-primary">
+  </form>
+{% endblock %}

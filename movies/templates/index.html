@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+  <div><a href="/movies/new/" class="btn btn-primary">새 영화 등록</a></div>
+  {% for movie in movies %}  
+    <div class="card my-1 d-inline-block col-sm-6 col-md-4 col-lg-3 p-0" style="width: 18rem;">
+      <img src="{{movie.poster_url}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <a href="/movies/{{movie.id}}/detail"><h5 class="card-title">{{movie.title}}</h5></a>
+        <p class="card-text">{{movie.score}}</p>
+        <a href="/movies/{{movie.id}}/edit/" class="btn btn-primary">영화정보 수정하기</a>
+        <a href="/movies/{{movie.id}}/delete/" class="btn btn-danger">영화정보 삭제하기</a>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}

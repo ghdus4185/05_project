@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+  <h2>새로운 영화를 등록해주세요</h2>
+  <form action="/movies/create/">
+    <div>title : <input type="text" class="form-control", name="title"></div>
+    <div>title_en : <input type="text" class="form-control", name="title_en"></div>
+    <div>audience : <input type="integer", name="audience"></div>
+    <div>open_data : <input type="date" class="form-control", name="open_data"></div>
+    <div>genre : <input type="text" class="form-control", name="genre"></div>
+    <div>watch_grade : <input type="text" class="form-control", name="watch_grade"></div>
+    <div>score : <input type="float" class="form-control", name="score"></div>
+    <div>poster_url : <input type="text" class="form-control", name="poster_url"></div>
+    <div>description : <input type="text" class="form-control", name="description"></div>
+    <input type="submit" class="btn btn-primary">
+  </form>
+{% endblock %}
